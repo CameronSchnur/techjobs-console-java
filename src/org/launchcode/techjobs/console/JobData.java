@@ -91,7 +91,9 @@ public class JobData {
                 x = x.toLowerCase();
                 y = y.toLowerCase();
                 if (x.contains(value)|| y.contains(value)) {
-                    jobs.add(row);
+                    if (!jobs.contains(row)) {
+                        jobs.add(row);
+                    }
                 }
             }
         }
